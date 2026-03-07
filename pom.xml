@@ -53,7 +53,7 @@
                 <configuration>
                     <archive>
                         <manifest>
-                            <mainClass>com.hadoop.mapreduce.tp1.WordCount</mainClass>                        
+                            <mainClass>com.hadoop.mapreduce.application.TotalSales</mainClass>                        
                         </manifest>
                     </archive>
                     <descriptorRefs>

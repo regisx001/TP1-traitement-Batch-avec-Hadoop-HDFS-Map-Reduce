@@ -3,17 +3,26 @@
   "configurations": [
     {
       "type": "java",
-      "name": "Current File",
+      "name": "TotalSales",
       "request": "launch",
-      "mainClass": "${file}"
+      "mainClass": "com.hadoop.mapreduce.application.TotalSales",
+      "projectName": "wordcount",
+      "args": [
+        "src/main/resources/input/purchases.txt",
+        "src/main/resources/output"
+      ]
     },
+
     {
       "type": "java",
       "name": "WordCount",
       "request": "launch",
       "mainClass": "com.hadoop.mapreduce.tp1.WordCount",
       "projectName": "wordcount",
-      "args": ["src/main/resources/input/file.txt", "src/main/resources/output"]
+      "args": [
+        "src/main/resources/input/file.txt",
+        "src/main/resources/output_wc"
+      ]
     }
   ]
 }
