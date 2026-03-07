@@ -17,6 +17,9 @@ public class TotalSales {
             System.exit(-1);
         }
 
+        System.out.println("ARG0 = " + args[0]);
+        System.out.println("ARG1 = " + args[1]);
+
         Configuration conf = new Configuration();
         Job job = Job.getInstance(conf, "Total Sales Per Store");
 

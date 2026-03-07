@@ -17,15 +17,20 @@ public class SalesMapper extends Mapper<Object, Text, Text, DoubleWritable> {
         String line = value.toString();
         String[] fields = line.split("\\s+");
 
-        if (fields.length >= 6) {
+        try {
 
-            String magasin = fields[2]; // store
-            double cout = Double.parseDouble(fields[4]); // price
+            String magasin = fields[2];
+
+            // price is always before payment method
+            double cout = Double.parseDouble(fields[fields.length - 2]);
 
             store.set(magasin);
             price.set(cout);
 
             context.write(store, price);
+
+        } catch (Exception e) {
+            // skip malformed lines
         }
     }
 }
