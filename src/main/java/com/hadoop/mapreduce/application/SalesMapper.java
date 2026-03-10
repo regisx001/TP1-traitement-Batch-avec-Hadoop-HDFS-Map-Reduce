@@ -21,7 +21,6 @@ public class SalesMapper extends Mapper<Object, Text, Text, DoubleWritable> {
 
             String magasin = fields[2];
 
-            // price is always before payment method
             double cout = Double.parseDouble(fields[fields.length - 2]);
 
             store.set(magasin);

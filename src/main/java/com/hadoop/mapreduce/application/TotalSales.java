@@ -21,6 +21,7 @@ public class TotalSales {
         System.out.println("ARG1 = " + args[1]);
 
         Configuration conf = new Configuration();
+
         Job job = Job.getInstance(conf, "Total Sales Per Store");
 
         job.setJarByClass(TotalSales.class);
